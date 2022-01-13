@@ -8,7 +8,12 @@ const app = express();
 app.use(cors());
 /* cors */
 app.use(json());
-app.listen(process.env.PORT || 3333);
+app.listen(process.env.PORT || 3333, (erro) => {
+  if (erro) {
+    return console.log(erro);
+  }
+  console.log("deu certo direitinho");
+});
 
 app.get("/", async (req, res) => {
   res.send("hello word");
@@ -40,14 +45,14 @@ app.get("/summoner/:summonerName", async (req, res) => {
     ? responseRanked.data[1]
     : responseRanked.data[0];
 
-    res.json({
-        iconUrl: `${process.env.LOL_ICONS}/${profileIconId}.png`,
-        summonerLevel,
-        tier,
-        rank,
-        wins,
-        losses,
-        queueType,
-        winRate: ((wins / (wins + losses)) * 100).toFixed(1),
-      });
+  res.json({
+    iconUrl: `${process.env.LOL_ICONS}/${profileIconId}.png`,
+    summonerLevel,
+    tier,
+    rank,
+    wins,
+    losses,
+    queueType,
+    winRate: ((wins / (wins + losses)) * 100).toFixed(1),
+  });
 });
