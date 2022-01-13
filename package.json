@@ -6,7 +6,7 @@
   "author": "<feliipemonteiro901@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node ./src/index.js",
     "start-dev": "nodemon src/index.js"
   },
   "dependencies": {
