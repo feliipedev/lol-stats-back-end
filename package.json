@@ -1,0 +1,20 @@
+{
+  "name": "lol-stats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/feliipedev/lol-stats.git",
+  "author": "<feliipemonteiro901@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start-dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "dotenv": "^11.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
