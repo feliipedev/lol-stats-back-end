@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 
 app.use(json());
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
 
 app.get("/", async (req, res) => {
   res.send("hello word");
